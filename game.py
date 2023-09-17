@@ -28,5 +28,5 @@ for i in range(5):
             print("猜低一點")
         else:
             print("猜高一點")
-
-print(f"答案為:{x}")
+if y != x:
+    print(f"答案為:{x}")
