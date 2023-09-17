@@ -8,7 +8,8 @@
 """
 import random
 
-low, high = 1, 50
+low, high = 1, 100
+nums = 10
 
 x = random.randint(low, high)
 print(x)
@@ -17,23 +18,26 @@ print(x)
 #    print(x)
 #    if x == 50:
 #        break
-for i in range(5):
-    y = eval(input(f"請輸入一個數字{low}~{high}:"))
-    if low < y < high:
-        if y == x:
-            print("恭喜猜對!")
-            break
-        else:
-            if y > x:
-                print("猜低一點")
-                if y < high:
-                    high = y - 1
-            else:
-                print("猜高一點")
-                if y > low:
-                    low = y + 1
+
+count = 0
+for i in range(nums):
+    y = eval(input(f"{count+1}/{nums}請輸入一個數字{low}~{high}:"))
+    #    if low < y < high:
+    if y == x:
+        print("恭喜猜對!")
+        break
     else:
-        print("請重新輸入")
+        if y > x:
+            print("猜低一點")
+            if y < high:
+                high = y - 1
+        else:
+            print("猜高一點")
+            if y > low:
+                low = y + 1
+    count += 1
+#    else:
+#        print("請重新輸入")
 
 if y != x:
     print(f"答案為:{x}")
