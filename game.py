@@ -11,16 +11,22 @@ import random
 low, high = 1, 50
 
 x = random.randint(low, high)
-
+print(x)
 # while True: #測試邏輯
 #    x = random.randint(low, high)
 #    print(x)
 #    if x == 50:
 #        break
+for i in range(5):
+    y = eval(input(f"請輸入一個數字{low}~{high}:"))
 
-y = eval(input(f"請輸入一個數字{low}~{high}"))
+    if y == x:
+        print("恭喜猜對!")
+        break
+    else:
+        if y > x:
+            print("猜低一點")
+        else:
+            print("猜高一點")
 
-if y == x:
-    print("恭喜猜對!")
-else:
-    print("猜錯了")
+print(f"答案為:{x}")
