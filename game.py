@@ -12,13 +12,14 @@ low, high = 1, 50
 
 x = random.randint(low, high)
 print(x)
+count = 0
 # while True: #測試邏輯
 #    x = random.randint(low, high)
 #    print(x)
 #    if x == 50:
 #        break
 for i in range(5):
-    y = eval(input(f"請輸入一個數字{low}~{high}:"))
+    y = eval(input(f"目前猜測第{count+1}次請輸入一個數字{low}~{high}:"))
     if low < y < high:
         if y == x:
             print("恭喜猜對!")
@@ -32,6 +33,7 @@ for i in range(5):
                 print("猜高一點")
                 if y > low:
                     low = y + 1
+        count += 1
     else:
         print("請重新輸入")
 
