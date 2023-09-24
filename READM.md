@@ -168,7 +168,20 @@
 	
 	- git remote -v 顯示目前連結的遠端倉庫
 
-	- git push -u origin master  從本地推送到雲端	
+	- git push -u origin master  從本地推送到雲端
+
+    - git clone 
+        - git clone http://github.com/aegis1013/git-demo.git
+        - 複製專案到本地端
+        - 本地端新增修改後
+            - git add .
+            - git commit -m "message"
+            - git push (確保遠端永遠最新)
+
+    - git pull
+        - 從遠端同步到本地端
+            - 開啟專案第一步	
+
 
 #【aegis1013的git_倉庫】
 	-echo "# git-demo" >> README.md
@@ -179,7 +192,20 @@
 	-git remote add origin https://github.com/aegis1013/git-demo.git (第一個綁定步驟	)
 	-git push -u origin main  (串流)
 
+- 錯誤可能是，電腦儲存了 git 使用者名稱和密碼，因此如果您切換到其他帳戶，則會出現 403 錯誤。以下是 Windows 的解決方案，
+- 您可以在此處找到金鑰：
 
+- 控制台 > 使用者帳戶 > 憑證管理器 > Windows 憑證 > 通用憑證
+
+- 接下來，刪除 Github 金鑰。
+
+- 在 mac
+- 1-在 Finder 中，搜尋「鑰匙圈存取」應用程式。
+- 2在「鑰匙圈訪問」中，搜尋 github.com。
+- 3-找到 github.com 的「網路密碼」條目。
+- 4-相應地編輯或刪除條目。
+
+- https://github.com/trilbymedia/grav-plugin-git-sync/issues/39
 --------------------------------------------------------------------------------
 
 # VSCode 
